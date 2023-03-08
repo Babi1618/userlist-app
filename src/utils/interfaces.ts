@@ -8,12 +8,16 @@ export interface UserProps {
   job?: string;
 }
 
-export type SingleUser = {
+export type UserType = {
   id: number;
   name: string;
   last_name: string;
   e_mail: string;
   online: boolean;
   archived?: boolean; //TODO
-  img?:string
+  img?: string;
+};
+
+export type CardsWrapperType = {
+  users: UserType[];
 };

@@ -18,12 +18,10 @@ export const Main = () => {
   const { isMobile, page } = useAppContext() as any;
   const [onlineUsers, setOnlineUsers] = useState<any>([]);
   const [usersNumberMobile, setUsersNumberMobile] = useState(0);
-  // const { users } = useMakeMockUsers(); // custom hook only for make first data
   const [users, setUsers] = useState<any>([]);
+
   const getUsers = useCallback(async () => {
     const res = await fetchUsers(`?_page=${page}&_limit=15`);
-    // console.log(users_mock)
-    // const res= users_mock.users
     const onlineUs = res.filter((el: any) => el.status === "active");
     const onlineUsPrev = users.filter(
       (el: any) => el.status === "active"
@@ -95,16 +93,16 @@ export const Main = () => {
         </div>
         {isMobile && (
           <CardsWrapperMobile
-            setOnlineUsers={setOnlineUsers}
-            setUsersNumberMobile={setUsersNumberMobile}
-            users_mock={users_mock}
+            // setOnlineUsers={setOnlineUsers}
+            // setUsersNumberMobile={setUsersNumberMobile}
+            // users_mock={users_mock}
             users={users}
           />
         )}
         {!isMobile && (
           <CardsWrapperDesktop
-            setOnlineUsers={setOnlineUsers}
-            users_mock={users_mock}
+            // setOnlineUsers={setOnlineUsers}
+            // users_mock={users_mock}
             users={users}
           />
         )}
