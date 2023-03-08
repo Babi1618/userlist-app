@@ -1,4 +1,4 @@
-import brand from "../../assets/brand.png";
+import brand from "../../assets/my_brand.png";
 import { useAppContext } from "../../context/AppContext";
 import {
   calendarIcon,
