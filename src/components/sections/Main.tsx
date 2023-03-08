@@ -1,5 +1,5 @@
 import { useAppContext } from "../../context/AppContext";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { CardsWrapperMobile } from "../general/CardsWrapperMobile";
 import { CardsWrapperDesktop } from "../general/CardsWrapperDesktop";
 import { NewChat, NewChatOnlineUsers } from "../../icons/NewChat";
@@ -12,14 +12,30 @@ import { pointIcon } from "../../icons/button-icons";
 import { MockCardChat } from "../MockCardChat";
 import { UserList } from "../general/UserList";
 import users_mock from "../../mock/mock_users.json";
-import useMakeMockUsers from "../../utils/useMakeMockUsers";
+import { fetchUsers } from "../../utils/api";
 
 export const Main = () => {
-  const { isMobile } = useAppContext() as any;
+  const { isMobile, page } = useAppContext() as any;
   const [onlineUsers, setOnlineUsers] = useState<any>([]);
   const [usersNumberMobile, setUsersNumberMobile] = useState(0);
-  const { users } = useMakeMockUsers();
-  console.log(users);
+  // const { users } = useMakeMockUsers(); // custom hook only for make first data
+  const [users, setUsers] = useState<any>([]);
+  const getUsers = useCallback(async () => {
+    const res = await fetchUsers(``);
+    // console.log(users_mock)
+    // const res= users_mock.users
+    const onlineUs = res.filter((el: any) => el.status === "active");
+    const onlineUsPrev = users.filter(
+      (el: any) => el.status === "active"
+    );
+    setUsers([...users, ...res]);
+    setOnlineUsers([...onlineUsPrev, ...onlineUs]);
+    setUsersNumberMobile([...users, ...res].length);
+  }, [page]);
+
+  useEffect(() => {
+    getUsers();
+  }, [getUsers]);
   return (
     <>
       <div className="main-container">
@@ -82,12 +98,14 @@ export const Main = () => {
             setOnlineUsers={setOnlineUsers}
             setUsersNumberMobile={setUsersNumberMobile}
             users_mock={users_mock}
+            users={users}
           />
         )}
         {!isMobile && (
           <CardsWrapperDesktop
             setOnlineUsers={setOnlineUsers}
             users_mock={users_mock}
+            users={users}
           />
         )}
       </div>

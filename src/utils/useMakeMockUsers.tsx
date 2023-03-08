@@ -23,11 +23,7 @@ const useMakeMockUsers = () => {
         name: faker.name.firstName(gender),
         last_name: faker.name.lastName(),
         e_mail: faker.internet.email(),
-        // password: faker.internet.password(),
-        // type: type,
-        // type: faker.helpers.arrayElement(["admin", "customer"]),
         sex: gender,
-        // birthdate: faker.date.birthdate({ min: 18, max: 65, mode: "age" }),
         img: `https://randomuser.me/api/portraits/${
           gender === "female" ? `women` : `men`
         }/${index + 1}.jpg`,
