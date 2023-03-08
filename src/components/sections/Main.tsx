@@ -21,7 +21,7 @@ export const Main = () => {
   // const { users } = useMakeMockUsers(); // custom hook only for make first data
   const [users, setUsers] = useState<any>([]);
   const getUsers = useCallback(async () => {
-    const res = await fetchUsers(``);
+    const res = await fetchUsers(`?_page=${page}&_limit=15`);
     // console.log(users_mock)
     // const res= users_mock.users
     const onlineUs = res.filter((el: any) => el.status === "active");
