@@ -1,3 +1,4 @@
+import React from 'react'
 import { Header } from "../components/sections/Header";
 import { Main } from "../components/sections/Main";
 import { NavigationBar } from "../components/sections/NavigationBar";

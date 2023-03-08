@@ -1,3 +1,4 @@
+import React from 'react'
 import { useAppContext } from "../../context/AppContext";
 import { useCallback, useEffect, useState } from "react";
 import { CardsWrapperMobile } from "../general/CardsWrapperMobile";

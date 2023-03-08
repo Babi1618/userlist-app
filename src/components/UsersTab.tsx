@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import React from 'react'
 export const UsersTab = () => {
   const [selected, setSelected] = useState("tab1");
   const handleClick = (id: string) => {

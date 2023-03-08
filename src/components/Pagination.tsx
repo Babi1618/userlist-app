@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useAppContext } from "../context/AppContext";
 import { ArrowLeft } from "../icons/ArrowLeft";
 import { ArrowRigth } from "../icons/ArrowRigth";
