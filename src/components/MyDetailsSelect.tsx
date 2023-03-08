@@ -5,7 +5,7 @@ export const MyDetailSelect = () => {
   return (
     <div
       className="custom-select my-details-select"
-      onClick={() => console.log("click open select")}
+      onClick={() => console.log("click open select - Mobile (TODO)")}
     >
       <div>My details</div>
       <div>

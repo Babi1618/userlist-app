@@ -19,14 +19,14 @@ export const Header = () => {
               iconWidth={20}
               iconColor={"white"}
               label="Add New..."
-              onClick={() => console.log("Add new click!")}
+              onClick={() => console.log("Add new click! (TODO)")}
             />
             <CustomButton
               className="more-button"
               icon={MoreIcon}
               iconWidth={20}
               iconColor="#4A4F5E"
-              onClick={() => console.log("more... click")}
+              onClick={() => console.log("more... click (TODO)")}
             />
           </div>
         </div>

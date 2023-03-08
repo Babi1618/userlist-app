@@ -3,9 +3,10 @@ import { useState } from "react";
 export const UsersTab = () => {
   const [selected, setSelected] = useState("tab1");
   const handleClick = (id: string) => {
+    console.log("user TAB: (TODO)");
     setSelected(id);
   };
-  
+
   return (
     <div className="users-tab">
       <SingleTab
@@ -16,7 +17,7 @@ export const UsersTab = () => {
       />
       <SingleTab
         id="tab2"
-        label="Active"
+        label="Online"
         handleClick={(e: any) => handleClick(e.target.id)}
         className={selected === "tab2" ? "users-tab-selected" : ""}
       />
