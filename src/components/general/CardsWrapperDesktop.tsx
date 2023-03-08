@@ -1,8 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useAppContext } from "../../context/AppContext";
-import { fetchUsers } from "../../utils/api";
 import { gridColumns } from "../../utils/grid-columns";
-import { SingleUser, UserProps } from "../../utils/interfaces";
 import { UserList } from "./UserList";
 // import users_mock from "../../mock/mock_users.json";
 

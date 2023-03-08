@@ -1,13 +1,22 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "name": "Gino",
-        "last_name": "Rossi",
-        "mail": "gino.rossi@gmail.com",
-        "online": true,
-        "archived": true
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": 1,
+      "name": "Gino",
+      "last_name": "Rossi",
+      "mail": "gino.rossi@gmail.com",
+      "online": true,
+      "archived": false,
+      "img": "https://cdn.pixabay.com/photo/2015/07/20/12/53/gehlert-852762_1280.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Ginetto",
+      "last_name": "Rossi",
+      "mail": "ginetto.rossi@gmail.com",
+      "online": false,
+      "archived": true,
+      "img": "https://cdn.pixabay.com/photo/2015/07/20/12/53/gehlert-852762_1280.jpg"
+    }
+  ]
+}

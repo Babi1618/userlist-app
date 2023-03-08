@@ -15,4 +15,5 @@ export type SingleUser = {
   e_mail: string;
   online: boolean;
   archived: boolean;
+  img?:string
 };

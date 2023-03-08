@@ -4,7 +4,6 @@ import { fetchUsers } from "../../utils/api";
 import { UserProps } from "../../utils/interfaces";
 import { MobileLoadMore } from "../MobileLoadMore";
 import { UserList } from "./UserList";
-// import users_mock from "../../mock/mock_users.json"
 
 export const CardsWrapperMobile = ({
   setOnlineUsers,
