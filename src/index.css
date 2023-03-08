@@ -109,8 +109,7 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  border-radius:50%
-
+  border-radius: 50%;
 }
 
 .nav-search {
@@ -280,7 +279,7 @@ body {
   margin-bottom: 16px;
   padding: 0 24px;
   height: 40px;
-  color: #4A4F5E;
+  color: #4a4f5e;
 }
 @media only screen and (min-width: 426px) {
   .main-box {
@@ -443,12 +442,11 @@ body {
   flex-direction: column;
   gap: 4px;
   color: #7a8194;
-  
 }
 .card-user-data div:first-child {
   font-weight: 500;
   font-size: 16px;
-  color:#4A4F5E
+  color: #4a4f5e;
 }
 .card-user-data div:nth-child(2) {
   font-weight: 400;

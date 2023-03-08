@@ -91,7 +91,7 @@ export const Main = () => {
         <div className="main-box">
           <div>
             Users{" "}
-            {isMobile ? <span>{usersNumberMobile}</span> : <span>{6}</span>}
+            {isMobile ? <span>{usersNumberMobile}</span> : <span>{users.length}</span>}
           </div>
           <div>
             <LayoutTab />
