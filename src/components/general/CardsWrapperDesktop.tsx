@@ -3,7 +3,6 @@ import { CardsWrapperType } from "../../utils/interfaces";
 import { UserList } from "./UserList";
 
 export const CardsWrapperDesktop = ({ users=[] }: CardsWrapperType) => {
-
   return (
     <div>
       <UserList

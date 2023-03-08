@@ -3,15 +3,12 @@ import { CardsWrapperType } from "../../utils/interfaces";
 import { MobileLoadMore } from "../MobileLoadMore";
 import { UserList } from "./UserList";
 
-export const CardsWrapperMobile = ({
-  users=[]
-}: CardsWrapperType) => {
-  const { page, setPage } = useAppContext() as any;
+export const CardsWrapperMobile = ({ users = [] }: CardsWrapperType) => {
+  const { setPage } = useAppContext() as any;
 
   const handleOtherUsers = () => {
     setPage((prev: number) => prev + 1);
   };
-
   return (
     <>
       <div>

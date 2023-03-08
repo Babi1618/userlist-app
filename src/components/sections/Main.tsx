@@ -11,7 +11,6 @@ import { CustomIcon } from "../general/CustomIcon";
 import { pointIcon } from "../../icons/button-icons";
 import { MockCardChat } from "../MockCardChat";
 import { UserList } from "../general/UserList";
-import users_mock from "../../mock/mock_users.json";
 import { fetchUsers } from "../../utils/api";
 
 export const Main = () => {
@@ -23,9 +22,7 @@ export const Main = () => {
   const getUsers = useCallback(async () => {
     const res = await fetchUsers(`?_page=${page}&_limit=15`);
     const onlineUs = res.filter((el: any) => el.status === "active");
-    const onlineUsPrev = users.filter(
-      (el: any) => el.status === "active"
-    );
+    const onlineUsPrev = users.filter((el: any) => el.status === "active");
     setUsers([...users, ...res]);
     setOnlineUsers([...onlineUsPrev, ...onlineUs]);
     setUsersNumberMobile([...users, ...res].length);
@@ -34,6 +31,7 @@ export const Main = () => {
   useEffect(() => {
     getUsers();
   }, [getUsers]);
+
   return (
     <>
       <div className="main-container">
