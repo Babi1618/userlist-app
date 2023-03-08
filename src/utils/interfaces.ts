@@ -14,6 +14,6 @@ export type SingleUser = {
   last_name: string;
   e_mail: string;
   online: boolean;
-  archived: boolean;
+  archived?: boolean; //TODO
   img?:string
 };

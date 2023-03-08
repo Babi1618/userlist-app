@@ -2,7 +2,6 @@ import { useAppContext } from "../../context/AppContext";
 import { useState } from "react";
 import { CardsWrapperMobile } from "../general/CardsWrapperMobile";
 import { CardsWrapperDesktop } from "../general/CardsWrapperDesktop";
-import { Card } from "../general/Card";
 import { NewChat, NewChatOnlineUsers } from "../../icons/NewChat";
 import { ArrowLeft } from "../../icons/ArrowLeft";
 import { ArrowRigth } from "../../icons/ArrowRigth";
@@ -13,12 +12,14 @@ import { pointIcon } from "../../icons/button-icons";
 import { MockCardChat } from "../MockCardChat";
 import { UserList } from "../general/UserList";
 import users_mock from "../../mock/mock_users.json";
+import useMakeMockUsers from "../../utils/useMakeMockUsers";
 
 export const Main = () => {
   const { isMobile } = useAppContext() as any;
   const [onlineUsers, setOnlineUsers] = useState<any>([]);
   const [usersNumberMobile, setUsersNumberMobile] = useState(0);
-
+  const { users } = useMakeMockUsers();
+  console.log(users);
   return (
     <>
       <div className="main-container">
@@ -83,7 +84,12 @@ export const Main = () => {
             users_mock={users_mock}
           />
         )}
-        {!isMobile && <CardsWrapperDesktop setOnlineUsers={setOnlineUsers} users_mock={users_mock}/>}
+        {!isMobile && (
+          <CardsWrapperDesktop
+            setOnlineUsers={setOnlineUsers}
+            users_mock={users_mock}
+          />
+        )}
       </div>
     </>
   );

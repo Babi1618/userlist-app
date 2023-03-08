@@ -1,8 +1,8 @@
 export const fetchUsers = async (url: string) => {
   const response = await fetch(
-    `https://gorest.co.in/public/v2/users${url}`
+    `http://localhost:3002/users${url}`
   ).then((response) => response.json());
-  console.log(response[1])
+  // console.log(response[1])
   return response;
 };
 

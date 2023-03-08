@@ -14,9 +14,9 @@ export const CardsWrapperMobile = ({
   const { page, setPage } = useAppContext() as any;
 
   const getUsers = useCallback(async () => {
-    // const res = await fetchUsers(`?page=${page}&per_page=6`);
-    console.log(users_mock)
-    const res= users_mock.users
+    const res = await fetchUsers(``);
+    // console.log(users_mock)
+    // const res= users_mock.users
     const onlineUs = res.filter((el: any) => el.status === "active");
     const onlineUsPrev = users.filter(
       (el: UserProps) => el.status === "active"

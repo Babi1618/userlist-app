@@ -2,7 +2,7 @@ import { communicationChat, menuMoreIcon } from "../../icons/button-icons";
 import { CustomButton } from "./CustomButton";
 
 export const Card = ({ user, gridColumns, photoWidth }: any) => {
-  console.log(user);
+  // console.log(user);
   return (
     <div className="card-container" style={{ gridColumn: gridColumns }}>
       <div className="card-content">
@@ -23,7 +23,7 @@ export const Card = ({ user, gridColumns, photoWidth }: any) => {
             </div>
             <div
               className={`user-active-or-not ${
-                user.online === false ? "user-inactive" : ""
+                !user.online ? "user-inactive" : ""
               }`}
             ></div>
           </div>
@@ -51,6 +51,8 @@ export const Card = ({ user, gridColumns, photoWidth }: any) => {
             {user.name} {user.last_name}
           </div>
           <div>{user.e_mail}</div>
+          <div>{user.phone}</div>
+
         </div>
       </div>
     </div>
