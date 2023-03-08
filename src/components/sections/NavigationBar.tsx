@@ -29,7 +29,7 @@ export const NavigationBar = () => {
               iconColor="#7A8194"
               onClick={() => console.log("click search")}
             />
-            <input type="text" placeholder="Search..." />
+            <input type="text" placeholder="Search... (TODO)" />
             {!isMobile && (
               <CustomButton
                 className="find-button label-button"
@@ -48,7 +48,7 @@ export const NavigationBar = () => {
             icon={menuIcon}
             iconWidth={26}
             iconColor="#4A4F5E"
-            onClick={() => console.log("toggler click")}
+            onClick={() => console.log("toggler click - Mobile (TODO)")}
           />
         )}
         {!isMobile && (
@@ -58,7 +58,7 @@ export const NavigationBar = () => {
               icon={filterIcon}
               iconWidth={18}
               iconColor="#7A8194"
-              onClick={() => console.log("toggler click")}
+              onClick={() => console.log("filter click - Desktop (TODO)")}
               label="Filters"
             />
             <CustomButton
@@ -66,7 +66,7 @@ export const NavigationBar = () => {
               icon={calendarIcon}
               iconWidth={18}
               iconColor="#7A8194"
-              onClick={() => console.log("toggler click")}
+              onClick={() => console.log("calendar click - Desktop (TODO)")}
             />
           </div>
         )}

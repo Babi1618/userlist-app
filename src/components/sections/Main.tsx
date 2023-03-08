@@ -21,8 +21,8 @@ export const Main = () => {
   const [users, setUsers] = useState<any>([]);
 
   const getUsers = useCallback(async () => {
-    // const res = await fetchUsers(`?_page=${page}&_limit=15`);
-    const res = mock_data.users;
+    const res = await fetchUsers(`?_page=${page}&_limit=15`);
+    // const res = mock_data.users; // for using mock data
     const onlineUs = res.filter((el: any) => el.online === true);
     const onlineUsPrev = users.filter((el: any) => el.status === "active");
     setUsers([...users, ...res]);
@@ -49,19 +49,23 @@ export const Main = () => {
                     icon={ArrowLeft}
                     iconWidth={24}
                     iconColor="#4A4F5E"
-                    onClick={() => console.log("go back")}
+                    onClick={() => console.log("go back (TODO)")}
                   />
                   <CustomButton
                     className="arrow-rigth"
                     icon={ArrowRigth}
                     iconWidth={24}
                     iconColor="#4A4F5E"
-                    onClick={() => console.log("move on")}
+                    onClick={() => console.log("move on (TODO)")}
                   />
                 </div>
               )}
               {isMobile && (
-                <NewChatOnlineUsers onClick={() => console.log("new!")} />
+                <>
+                  <NewChatOnlineUsers
+                    onClick={() => console.log("new chat - Mobile (TODO)")}
+                  />
+                </>
               )}
             </div>
           </div>
@@ -69,7 +73,9 @@ export const Main = () => {
             <div className="online-users-container">
               <div className="new-chat-card card-container">
                 <div>
-                  <NewChat onClick={() => console.log("new chat!")} />
+                  <NewChat
+                    onClick={() => console.log("new chat - Desktop! (TODO)")}
+                  />
                 </div>
                 <div>New Chat</div>
               </div>
@@ -114,6 +120,7 @@ export const Main = () => {
 const MoreComponent = () => {
   const [selected, setSelected] = useState("point1");
   const handleClick = (id: string) => {
+    console.log("(TODO)");
     setSelected(id);
   };
 
