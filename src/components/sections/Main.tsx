@@ -12,7 +12,6 @@ import { pointIcon } from "../../icons/button-icons";
 import { MockCardChat } from "../MockCardChat";
 import { UserList } from "../general/UserList";
 import { fetchUsers } from "../../utils/api"; //for using mock data
-import mock_data from "../../mock/mock_users.json";
 
 export const Main = () => {
   const { isMobile, page } = useAppContext() as any;

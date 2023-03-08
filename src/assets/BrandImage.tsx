@@ -15,7 +15,7 @@ export const BrandImage = () => {
           width="40"
           height="40"
           fill="url(#pattern0)"
-          shape-rendering="crispEdges"
+          shapeRendering="crispEdges"
         />
       </g>
       <defs>
@@ -26,9 +26,9 @@ export const BrandImage = () => {
           width="72"
           height="72"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"

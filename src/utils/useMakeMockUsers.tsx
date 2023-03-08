@@ -6,7 +6,7 @@ const useMakeMockUsers = () => {
   const [data, setData] = useState("prova");
   const [users, setUsers] = useState<any>([]);
   const createFakeUsers = useCallback(() => {
-    let employees = [];
+    const employees = [];
     for (let index = 0; index < 99; index++) {
       let gender: genderType = "female";
       let online = true;

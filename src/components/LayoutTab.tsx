@@ -1,12 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { gridIcon } from "../icons/gridIcon";
 import { MenuBurger } from "../icons/MenuBurger";
 import { CustomIcon } from "./general/CustomIcon";
 
 export const LayoutTab = () => {
-  const [selected, setSelected] = useState("tab1");
   const handleClick = (id: string) => {
-    setSelected(id);
+    console.log("TODO");
   };
 
   return (
