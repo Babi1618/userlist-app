@@ -11,7 +11,8 @@ import { CustomIcon } from "../general/CustomIcon";
 import { pointIcon } from "../../icons/button-icons";
 import { MockCardChat } from "../MockCardChat";
 import { UserList } from "../general/UserList";
-import { fetchUsers } from "../../utils/api";
+import { fetchUsers } from "../../utils/api"; //for using mock data
+import mock_data from "../../mock/mock_users.json";
 
 export const Main = () => {
   const { isMobile, page } = useAppContext() as any;
@@ -20,8 +21,9 @@ export const Main = () => {
   const [users, setUsers] = useState<any>([]);
 
   const getUsers = useCallback(async () => {
-    const res = await fetchUsers(`?_page=${page}&_limit=15`);
-    const onlineUs = res.filter((el: any) => el.status === "active");
+    // const res = await fetchUsers(`?_page=${page}&_limit=15`);
+    const res = mock_data.users;
+    const onlineUs = res.filter((el: any) => el.online === true);
     const onlineUsPrev = users.filter((el: any) => el.status === "active");
     setUsers([...users, ...res]);
     setOnlineUsers([...onlineUsPrev, ...onlineUs]);
