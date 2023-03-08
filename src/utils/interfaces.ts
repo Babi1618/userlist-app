@@ -7,3 +7,12 @@ export interface UserProps {
   img?: string;
   job?: string;
 }
+
+export type SingleUser = {
+  id: number;
+  name: string;
+  last_name: string;
+  e_mail: string;
+  online: boolean;
+  archived: boolean;
+};

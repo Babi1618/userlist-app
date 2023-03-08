@@ -12,6 +12,7 @@ import { CustomIcon } from "../general/CustomIcon";
 import { pointIcon } from "../../icons/button-icons";
 import { MockCardChat } from "../MockCardChat";
 import { UserList } from "../general/UserList";
+import users_mock from "../../mock/mock_users.json";
 
 export const Main = () => {
   const { isMobile } = useAppContext() as any;
@@ -44,7 +45,9 @@ export const Main = () => {
                   />
                 </div>
               )}
-              {isMobile && <NewChatOnlineUsers onClick={() => console.log("new!")} />}
+              {isMobile && (
+                <NewChatOnlineUsers onClick={() => console.log("new!")} />
+              )}
             </div>
           </div>
           <div className="online-users-box">
@@ -65,7 +68,10 @@ export const Main = () => {
           </div>
         </div>
         <div className="main-box">
-          <div>Users {isMobile ?<span>{usersNumberMobile}</span>:<span>{6}</span>}</div>
+          <div>
+            Users{" "}
+            {isMobile ? <span>{usersNumberMobile}</span> : <span>{6}</span>}
+          </div>
           <div>
             <LayoutTab />
           </div>
@@ -74,9 +80,10 @@ export const Main = () => {
           <CardsWrapperMobile
             setOnlineUsers={setOnlineUsers}
             setUsersNumberMobile={setUsersNumberMobile}
+            users_mock={users_mock}
           />
         )}
-        {!isMobile && <CardsWrapperDesktop setOnlineUsers={setOnlineUsers} />}
+        {!isMobile && <CardsWrapperDesktop setOnlineUsers={setOnlineUsers} users_mock={users_mock}/>}
       </div>
     </>
   );

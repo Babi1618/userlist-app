@@ -85,7 +85,7 @@ export const Pagination = () => {
           </div>
         </div>
       </div>
-      {/* <select
+      <select
           className="pagination-select"
           onChange={(e) => {
             setTens(Number(e.target.value) * 10);
@@ -98,7 +98,7 @@ export const Pagination = () => {
               </option>
             );
           })}
-        </select> */}
+        </select>
     </>
   );
 };

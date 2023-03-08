@@ -1,0 +1,13 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Gino",
+        "last_name": "Rossi",
+        "mail": "gino.rossi@gmail.com",
+        "online": true,
+        "archived": true
+      }
+    ]
+  }
+  

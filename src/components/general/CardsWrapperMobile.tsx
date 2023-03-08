@@ -4,17 +4,21 @@ import { fetchUsers } from "../../utils/api";
 import { UserProps } from "../../utils/interfaces";
 import { MobileLoadMore } from "../MobileLoadMore";
 import { UserList } from "./UserList";
+// import users_mock from "../../mock/mock_users.json"
 
 export const CardsWrapperMobile = ({
   setOnlineUsers,
   setUsersNumberMobile,
+  users_mock
 }: any) => {
   const [users, setUsers] = useState<any>([]);
   const { page, setPage } = useAppContext() as any;
 
   const getUsers = useCallback(async () => {
-    const res = await fetchUsers(`?page=${page}&per_page=6`);
-    const onlineUs = res.filter((el: UserProps) => el.status === "active");
+    // const res = await fetchUsers(`?page=${page}&per_page=6`);
+    console.log(users_mock)
+    const res= users_mock.users
+    const onlineUs = res.filter((el: any) => el.status === "active");
     const onlineUsPrev = users.filter(
       (el: UserProps) => el.status === "active"
     );

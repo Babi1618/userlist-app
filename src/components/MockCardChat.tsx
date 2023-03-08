@@ -1,6 +1,3 @@
-import { communicationChat, menuMoreIcon } from "../icons/button-icons";
-import { CustomButton } from "./general/CustomButton";
-
 export const MockCardChat = ({ gridColumns }: any) => {
   return (
     <div
