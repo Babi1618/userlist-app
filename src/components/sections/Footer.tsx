@@ -1,5 +1,4 @@
 import { useAppContext } from "../../context/AppContext";
-import { Pagination } from "../Pagination";
 import { TabBar } from "../TabBar";
 
 export const Footer = () => {
@@ -7,8 +6,8 @@ export const Footer = () => {
 
   return (
     <div className="footer-container">
-      {isMobile && <TabBar />}
-      {!isMobile && <Pagination />}
+      {isMobile && <TabBar />} {/* TODO */}
+      {/* {!isMobile && <Pagination />} */} {/* TODO*/}
     </div>
   );
 };

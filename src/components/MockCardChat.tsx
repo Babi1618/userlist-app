@@ -29,7 +29,7 @@ export const MockCardChat = ({ gridColumns }: any) => {
         </div>
         <div className="card-user-data ">
           <div>Design Chat</div>
-          <div>Designer </div>
+          <div></div>
         </div>
       </div>
     </div>

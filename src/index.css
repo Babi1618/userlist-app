@@ -440,15 +440,20 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  color: #7a8194;
+  
 }
 .card-user-data div:first-child {
   font-weight: 500;
   font-size: 16px;
+  color:#4A4F5E
 }
 .card-user-data div:nth-child(2) {
   font-weight: 400;
-  font-size: 14px;
-  color: #7a8194;
+  font-size: 10px;
+}
+.card-user-data div:nth-child(3) {
+  font-size: 12px;
 }
 
 .new-chat-card {
